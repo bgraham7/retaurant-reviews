@@ -51,6 +51,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
+  height: 60px;
   background-color: #252831;
   text-align:center;
 }
@@ -67,6 +68,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
+    box-sizing: border-box;
     padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
@@ -143,7 +145,6 @@ nav h1 a {
   list-style: outside none none;
   padding: 0 15px 15px 15px;
   margin: 0;
-  /* padding: 30px 15px 60px; */
   text-align: center;
 }
 #restaurants-list li {
@@ -226,7 +227,6 @@ nav h1 a {
   font-size: 2em;
   font-weight: 200;
   letter-spacing: 0;
-  /* margin: 15px 0 30px; */
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -321,4 +321,44 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  nav, #footer {
+    box-sizing: border-box;
+    height: 60px;
+  }
+
+  #maincontent {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .restaurant-details, .restaurants {
+    order: 1;
+    width: 40%;
+    overflow-y:scroll;
+  }
+
+  #map-container {
+    order: 2;
+    width: 60%;
+  }
+
+  #map, .restaurant-details, .restaurants {
+    height: calc(100vh - 120px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .restaurant-details, .restaurants {
+    width: 30%;
+  }
+
+  #map-container {
+    width: 70%;
+  }
 }
