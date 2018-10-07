@@ -48,6 +48,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+/* Better focus highlighting for accessability */
+#map:focus, #map img:focus, .leaflet-control-zoom-in:focus, select:focus, #map a  {
+  outline: 1px solid blue;
+}
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -337,13 +343,11 @@ nav h1 a {
   }
 
   .restaurant-details, .restaurants {
-    order: 1;
     width: 40%;
     overflow-y:scroll;
   }
 
   #map-container {
-    order: 2;
     width: 60%;
   }
 
