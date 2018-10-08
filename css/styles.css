@@ -50,7 +50,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 /* Better focus highlighting for accessability */
-#map:focus, #map img:focus, .leaflet-control-zoom-in:focus, select:focus, #map a  {
+#map:focus, #map img:focus, .leaflet-control-zoom-in:focus, select:focus, #map a:focus  {
   outline: 1px solid blue;
 }
 
